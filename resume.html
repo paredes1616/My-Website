@@ -69,6 +69,135 @@ ul.topnav li a:hover {
 <div class = "main">
 <h2 style= text-align:center;>My Resume<h2>
 <h3> I am a student at University of Belize who is currently enrolled in the course I.T. I graduated from Eden S.D.A High in Santa Elena Cayo, and I also live in San Ignacio.<h3>
+
+  <h3> Here are some codes I did, go try it out!</h3>
+  
+<head>
+    <title>Calculation of Numbers </title>
+</head>
+<body>
+    <h2>Add Two Numbers</h2>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <p>Result: <span id="result"></span></p>
+
+    <script>
+        function calculateSum() {
+            // Get the values from the input fields
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            
+            // Calculate the sum
+            let sum = num1 + num2;
+            
+            // Display the result
+            document.getElementById('result').textContent = sum;
+        }
+    </script>
+	
+	<h2>Multiply Two Numbers</h2>
+    <input type="pnumber" id="pnum1" placeholder="Enter first number">
+    <input type="pnumber" id="pnum2" placeholder="Enter second number">
+    <button onclick="calculateProduct()">Calculate Product</button>
+    <p>Result: <span id="presult"></span></p>
+
+    <script>
+        function calculateProduct() {
+            // Get the values from the input fields
+            let pnum1 = parseFloat(document.getElementById('pnum1').value);
+            let pnum2 = parseFloat(document.getElementById('pnum2').value);
+            
+            // Calculate the sum
+            let product = pnum1 * pnum2;
+            
+            // Display the result
+            document.getElementById('presult').textContent = product;
+        }
+    </script>
+	
+	<h2>Divide Two Numbers</h2>
+    <input type="dnumber" id="dnum1" placeholder="Enter first number">
+    <input type="dnumber" id="dnum2" placeholder="Enter second number">
+    <button onclick="calculateDivision()">Calculate Division</button>
+    <p>Result: <span id="dresult"></span></p>
+
+    <script>
+        function calculateDivision() {
+            // Get the values from the input fields
+            let dnum1 = parseFloat(document.getElementById('dnum1').value);
+            let dnum2 = parseFloat(document.getElementById('dnum2').value);
+            
+            // Calculate the sum
+            let Division = dnum1 / dnum2;
+            
+            // Display the result
+            document.getElementById('dresult').textContent = Division;
+        }
+    </script>
+	
+	<h2>Subtract Two Numbers</h2>
+    <input type="snumber" id="snum1" placeholder="Enter first number">
+    <input type="snumber" id="snum2" placeholder="Enter second number">
+    <button onclick="calculateDifference()">Calculate Difference</button>
+    <p>Result: <span id="sresult"></span></p>
+
+    <script>
+        function calculateDifference() {
+            // Get the values from the input fields
+            let snum1 = parseFloat(document.getElementById('snum1').value);
+            let snum2 = parseFloat(document.getElementById('snum2').value);
+            
+            // Calculate the sum
+            let Difference = snum1 - snum2;
+            
+            // Display the result
+            document.getElementById('sresult').textContent = Difference;
+        }
+    </script>
+	
+	
+	<h2>BMI Calculator</h2>
+<input type="number" id="lbs" placeholder="Enter weight in lbs">
+<input type="number" id="inch" placeholder="Enter height in Inches">
+<button onclick="calculateBMI()">Calculate BMI</button>
+<p>Result: <span id="result"></span></p>
+<p>Meaning: <span id="meaning"></span></p>
+	
+<script>
+    function calculateBMI() {
+        
+        let lbs = parseFloat(document.getElementById('lbs').value);
+        let inch = parseFloat(document.getElementById('inch').value);
+        
+        if (isNaN(lbs) || isNaN(inch) || lbs <= 0 || inch <= 0) {
+            document.getElementById('result').textContent = "Invalid Input";
+            document.getElementById('meaning').textContent = "Please enter valid weight and height values.";
+            return; 
+        }
+
+        
+        let BMI = (703 * lbs) / (inch * inch);
+           
+        let meaning;
+        if (BMI <= 18.5){
+            meaning = "Underweight";
+        } else if (BMI <= 24.9) {
+            meaning = "Healthy Weight";
+        } else if (BMI <= 29.9){
+            meaning = "Overweight";
+        } else {
+            meaning = "Obesity";
+        }
+        
+        document.getElementById('result').textContent = BMI.toFixed(2);
+        document.getElementById('meaning').textContent = meaning;
+    }
+</script>
+	
+	
+</body>
+</html>
 </body>
 </html>
 
